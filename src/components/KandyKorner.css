@@ -31,3 +31,10 @@ p {
   margin-block-end: 0;
 }
 
+#header {
+  color: purple;
+  text-align: center;
+  border: 4px dashed purple;
+  border-radius: 20px;
+  padding: 10px;
+}

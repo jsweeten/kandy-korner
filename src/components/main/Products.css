@@ -1,0 +1,22 @@
+#product-container {
+    border: 4px solid purple;
+    border-radius: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item {
+    border: 4px solid purple;
+    border-radius: 20px;
+    margin: 5px auto;
+}
+
+.product-details {
+    list-style: none;
+    text-align: center;
+}
+
+.product-name {
+    font-weight: 700;
+}

@@ -1,0 +1,10 @@
+#locations-container {
+    border: 4px solid purple;
+    border-radius: 20px;
+    color: purple;
+    margin-top: 25px;
+}
+
+h2 {
+    text-align: center;
+}
