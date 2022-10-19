@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Products.css'
 
-export const Products = () => {
+export const ProductList = ({ searchTermState }) => {
 
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
@@ -22,14 +22,11 @@ export const Products = () => {
 
     useEffect(
         () => {
-            fetch('http://localhost:8088/productLocations')
-            .then(res => res.json())
-            .then(
-                (productLocationsArray) => {
-                    setProductLocations(productLocationsArray)
-                }
-            )
-        }, []
+            const searchedProduct = products.filter(product =>
+                product.name.toLowerCase().startsWith(searchTermState.toLowerCase()))
+            setFilteredProducts(searchedProduct)
+        },
+        [ searchTermState ]
     )
 
     useEffect(
@@ -45,9 +42,10 @@ export const Products = () => {
 
     return (
         <>
-            <h2>cHeCk oUt oUr kOlLeCtIoN oF kAnDy!</h2>
-            <button id="top-priced-on" onClick={() => {setTopPriced(true)}}>Top Priced Candy</button>
-            <button id="top-priced-off" onClick={() => {setTopPriced(false)}}>All Candy</button>
+            <div className="button-container">
+            <button className="filter-buttons" id="top-priced-on" onClick={() => {setTopPriced(true)}}>Top Priced Candy</button>
+            <button className="filter-buttons" id="top-priced-off" onClick={() => {setTopPriced(false)}}>All Candy</button>
+            </div>
             <div id="product-list-container">
                     { filteredProducts.map((product) => {
                     return (

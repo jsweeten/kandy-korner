@@ -1,7 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { Locations } from "../main/Locations"
-import { Products } from "../main/Products"
-import { ProductForm } from '../main/ProductForm'
+import { Locations } from "../locations/Locations"
+import { ProductContainer } from "../products/ProductContainer"
+import { ProductForm } from '../products/ProductForm'
 
 export const ApplicationViews = () => {
 	return (
@@ -17,7 +17,7 @@ export const ApplicationViews = () => {
                 </>
             }>
                 <Route index path="locations" element={ < Locations /> } />
-                <Route path="products" element={ < Products /> } />
+                <Route path="products" element={ < ProductContainer /> } />
                 <Route path="new" element={ < ProductForm /> } />
             </Route>
         </Routes>

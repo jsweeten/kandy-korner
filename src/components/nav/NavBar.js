@@ -12,7 +12,7 @@ export const NavBar = () => {
             </li>
             <li className="navbar__item navbar__products">
                 <Link className="navbar__link" to="/products">
-                    Candy</Link>
+                    Find Candy</Link>
             </li>
             <li className="navbar__item navbar__newproduct">
                 <Link className="navbar__link" to="/new">
