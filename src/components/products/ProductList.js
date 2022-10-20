@@ -49,7 +49,7 @@ export const ProductList = ({ searchTermState }) => {
             <div id="product-list-container">
                     { filteredProducts.map((product) => {
                     return (
-                        <div key={product.id}>
+                        <div className="product-div" key={product.id}>
                             <ul className="product-item">
                                     <li className="product-name">{product.name}</li>
                                     <li className="product-price">${product.price}</li>

@@ -1,20 +1,26 @@
-#product-container {
+#product-list-container {
     border: 4px solid purple;
     border-radius: 20px;
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .product-item {
     border: 4px solid purple;
     border-radius: 20px;
     margin: 5px auto;
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+    background-color: lightgray;
+    color: indigo;
 }
 
 .product-details {
     list-style: none;
     text-align: center;
+    padding: 0;
 }
 
 .product-name {
@@ -31,4 +37,9 @@
 
 .filter-buttons {
     margin: 10px;
+}
+
+.product-div {
+    margin: 10px;
+    width: 23%;
 }

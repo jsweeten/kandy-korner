@@ -6,7 +6,7 @@ export const Register = (props) => {
     const [user, setUser] = useState({
         email: "",
         fullName: "",
-        isStaff: false
+        isEmployee: false
     })
     let navigate = useNavigate()
 
@@ -23,7 +23,7 @@ export const Register = (props) => {
                 if (createdUser.hasOwnProperty("id")) {
                     localStorage.setItem("kandy_user", JSON.stringify({
                         id: createdUser.id,
-                        staff: createdUser.isStaff
+                        isEmployee: createdUser.isEmployee
                     }))
 
                     navigate("/")
