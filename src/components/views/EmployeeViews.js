@@ -3,6 +3,8 @@ import { ProductForm } from "../products/ProductForm"
 import { ProductContainer } from "../products/ProductContainer"
 import { EmployeeContainer } from "../employees/EmployeeContainer"
 import { Locations } from "../locations/Locations"
+import { CustomerList } from "../customers/CustomerList"
+import { CustomerDetails } from "../customers/CustomerDetails"
 
 export const EmployeeViews = () => {
 	return (
@@ -21,6 +23,8 @@ export const EmployeeViews = () => {
                 <Route path="products" element={ < ProductContainer /> } />
                 <Route path="new" element={ < ProductForm /> } />
                 <Route path="employees" element={ < EmployeeContainer /> } />
+                <Route path="customers" element={ < CustomerList /> } />
+                <Route path="customers/:customerId" element={ < CustomerDetails /> } />
             </Route>
         </Routes>
     )

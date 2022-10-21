@@ -41,22 +41,21 @@ export const HiringForm = () => {
             body: JSON.stringify(userToSendToAPI)
         })
         .then(response => response.json())
-        .then((userObj) => {
-            employeeToSendToAPI.userId = userObj.id
-        })
-        .then(fetch('http://localhost:8088/employees', {
+        .then((data) => {
+            employeeToSendToAPI.userId = data.id
+        fetch('http://localhost:8088/employees', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(employeeToSendToAPI)
-        }))
+        })
         .then(res => res.json())
         .then(
             () => {
             navigate("/employees")
         })
-    }
+    })}
 
     return (
         <form className="hiringForm">
